@@ -13,6 +13,10 @@ function writePassword() {
   
 
   var lengthQuestion = prompt("How many characters will your password be?");
+  if(lengthQuestion < 8 || lengthQuestion > 128){
+    alert("Password must be between 8 - 128 characters.");
+    return;  
+  }
   var specialCharQues = confirm("Does your password require symbols?");
   var numbersQues = confirm("Does your password require numbers?");
   var upperQues = confirm("Does your password require upper case letters?");
@@ -24,6 +28,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   var possibleChar = [];
+
 
   if (specialCharQues) {
     possibleChar = possibleChar.concat(specialCharacters);
@@ -61,7 +66,7 @@ function writePassword() {
     copyText.select();
     document.execCommand("copy");
     alert("Password has been copied to clipboard!");
-  }
+    }
   copyBtn.removeAttribute(passwordText);
   copyBtn.focus();
  
