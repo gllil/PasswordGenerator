@@ -14,7 +14,7 @@ function writePassword() {
 
   var lengthQuestion = prompt("How many characters will your password be?");
   if(lengthQuestion < 8 || lengthQuestion > 128){
-    alert("Password must be between 8 - 128 characters.");
+    alert("Password must be between 8 - 128 characters. Please try again.");
     return;  
   }
   var specialCharQues = confirm("Does your password require symbols?");
