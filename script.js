@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("#copy");
 
 // Write password to the #password input
 function writePassword() {
@@ -53,22 +54,33 @@ function writePassword() {
   
   passwordText.value = newPassword;
 
-  
+  function copyToClipboard() {
+    // BONUS 
 
-  // copyBtn.removeAttribute("disabled");
-  // copyBtn.focus();
+    var copyText = document.querySelector("#password");
+    copyText.select();
+    document.execCommand("copy");
+    alert("Password has been copied to clipboard!");
+  }
+  copyBtn.removeAttribute(passwordText);
+  copyBtn.focus();
+ 
+ 
+  copyBtn.addEventListener("click", copyToClipboard);
+
 }
 
 
 
-function copyToClipboard() {
-  // BONUS 
-}
+
+
 
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
 
     
 

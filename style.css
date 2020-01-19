@@ -83,9 +83,20 @@ header {
     cursor: pointer;
 }
 
-button[disabled] {
-    cursor: default;
+.copy-btn {
+    border: none;
     background: #c0c7cf;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+    color: hsl(0, 0%, 100%);
+    /* display: inline-block; */
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
 }
 
 .float-right {
@@ -114,7 +125,8 @@ button[disabled] {
 }
 
 @media (max-width: 690px) {
-    .btn {
+    .btn,
+    .copy-btn {
         font-size: 1rem;
         margin: 16px 0px 0px 0px;
         padding: 10px 15px;
@@ -126,7 +138,8 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
-    .btn {
+    .btn,
+    .copy-btn {
         font-size: 0.8rem;
     }
 }
